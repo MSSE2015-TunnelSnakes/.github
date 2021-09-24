@@ -1,7 +1,7 @@
 {
     "name": ".Net Build/Test",
     "description": "generic .net build/test workflow",
-    "iconName": "test",
+    "iconName": "battery",
     "categories": [
         "dot-net",
 		"c#"
