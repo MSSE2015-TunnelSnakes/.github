@@ -1,7 +1,7 @@
 {
     "name": ".Net Build/Test",
     "description": "generic .net build/test workflow",
-    "iconName": "example-icon",
+    "iconName": "c-sharp",
     "categories": [
         "dot-net",
 		"c#"
