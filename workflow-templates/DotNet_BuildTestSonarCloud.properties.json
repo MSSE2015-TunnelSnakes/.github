@@ -1,0 +1,13 @@
+{
+    "name": ".Net Build/Test with SonarCloud Scan",
+    "description": "generic .net build/test which is run within a SonarCloud Scan wrapper",
+    "iconName": "dot-net",
+    "categories": [
+        "dot-net",
+		"c#"
+    ],
+    "filePatterns": [
+        "**/*.sln$"
+        "**/*.csproj$"
+    ]
+}

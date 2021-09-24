@@ -1,0 +1,39 @@
+# generic .net build/test workflow
+
+name: .Net Build/Test
+
+# set your branches and rules here
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+# fill out the environment variables for your project then customize  
+env:
+  DOTNET_VERSION: '6.0.x'
+  IS_DOTNET_VERSION_PREVIEW: true
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        include-prerelease: ${{ env.IS_DOTNET_VERSION_PREVIEW }}
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal

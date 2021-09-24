@@ -1,0 +1,9 @@
+{
+    "name": ".Net Build/Test",
+    "description": "generic .net build/test workflow",
+    "iconName": "dot-net",
+    "categories": [
+        "dot-net",
+		"c#"
+    ]
+}
